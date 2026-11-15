@@ -8,7 +8,8 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(Dawn REQUIRED)
 find_package(glfw3 REQUIRED)
 
-add_executable(bin src/main.cpp src/appdef.cpp src/window.cpp)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS "src/*.cpp" "src/*.h")
+add_executable(bin ${SOURCES})
 
 target_include_directories(bin PRIVATE
     ${CMAKE_SOURCE_DIR}/dawn/include

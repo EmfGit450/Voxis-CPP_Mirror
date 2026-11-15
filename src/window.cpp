@@ -1,4 +1,5 @@
 #include "appdef.h"
+#include "webgpu/webgpu_cpp.h"
 #include "window.h"
 #include <webgpu/webgpu_glfw.h>
 #include <string_view>
@@ -63,7 +64,7 @@ WindowContext InitWindow(int width, int height, const char* title) {
   ctx.config.device = ctx.device;
   ctx.config.width = width;
   ctx.config.height = height;
-  ctx.config.presentMode = wgpu::PresentMode::Fifo;
+  ctx.config.presentMode = wgpu::PresentMode::Mailbox;
 
   wgpu::SurfaceCapabilities caps;
   ctx.surface.GetCapabilities(ctx.adapter, &caps);
@@ -73,4 +74,8 @@ WindowContext InitWindow(int width, int height, const char* title) {
 
   App::log("Successfully configured WebGPU", App::LogType::INFO);
   return ctx;
+}
+
+void setPresentMode(WindowContext& ctx, wgpu::PresentMode presentMode) {
+  ctx.config.presentMode = presentMode;
 }
