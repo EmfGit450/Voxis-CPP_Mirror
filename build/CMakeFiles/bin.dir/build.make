@@ -72,35 +72,67 @@ include CMakeFiles/bin.dir/flags.make
 CMakeFiles/bin.dir/codegen:
 .PHONY : CMakeFiles/bin.dir/codegen
 
-CMakeFiles/bin.dir/init.cpp.o: CMakeFiles/bin.dir/flags.make
-CMakeFiles/bin.dir/init.cpp.o: /home/acer/code/voxis-cpp/init.cpp
-CMakeFiles/bin.dir/init.cpp.o: CMakeFiles/bin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bin.dir/init.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bin.dir/init.cpp.o -MF CMakeFiles/bin.dir/init.cpp.o.d -o CMakeFiles/bin.dir/init.cpp.o -c /home/acer/code/voxis-cpp/init.cpp
+CMakeFiles/bin.dir/src/main.cpp.o: CMakeFiles/bin.dir/flags.make
+CMakeFiles/bin.dir/src/main.cpp.o: /home/acer/code/voxis-cpp/src/main.cpp
+CMakeFiles/bin.dir/src/main.cpp.o: CMakeFiles/bin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/bin.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bin.dir/src/main.cpp.o -MF CMakeFiles/bin.dir/src/main.cpp.o.d -o CMakeFiles/bin.dir/src/main.cpp.o -c /home/acer/code/voxis-cpp/src/main.cpp
 
-CMakeFiles/bin.dir/init.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bin.dir/init.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acer/code/voxis-cpp/init.cpp > CMakeFiles/bin.dir/init.cpp.i
+CMakeFiles/bin.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bin.dir/src/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acer/code/voxis-cpp/src/main.cpp > CMakeFiles/bin.dir/src/main.cpp.i
 
-CMakeFiles/bin.dir/init.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bin.dir/init.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acer/code/voxis-cpp/init.cpp -o CMakeFiles/bin.dir/init.cpp.s
+CMakeFiles/bin.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bin.dir/src/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acer/code/voxis-cpp/src/main.cpp -o CMakeFiles/bin.dir/src/main.cpp.s
+
+CMakeFiles/bin.dir/src/appdef.cpp.o: CMakeFiles/bin.dir/flags.make
+CMakeFiles/bin.dir/src/appdef.cpp.o: /home/acer/code/voxis-cpp/src/appdef.cpp
+CMakeFiles/bin.dir/src/appdef.cpp.o: CMakeFiles/bin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/bin.dir/src/appdef.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bin.dir/src/appdef.cpp.o -MF CMakeFiles/bin.dir/src/appdef.cpp.o.d -o CMakeFiles/bin.dir/src/appdef.cpp.o -c /home/acer/code/voxis-cpp/src/appdef.cpp
+
+CMakeFiles/bin.dir/src/appdef.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bin.dir/src/appdef.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acer/code/voxis-cpp/src/appdef.cpp > CMakeFiles/bin.dir/src/appdef.cpp.i
+
+CMakeFiles/bin.dir/src/appdef.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bin.dir/src/appdef.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acer/code/voxis-cpp/src/appdef.cpp -o CMakeFiles/bin.dir/src/appdef.cpp.s
+
+CMakeFiles/bin.dir/src/window.cpp.o: CMakeFiles/bin.dir/flags.make
+CMakeFiles/bin.dir/src/window.cpp.o: /home/acer/code/voxis-cpp/src/window.cpp
+CMakeFiles/bin.dir/src/window.cpp.o: CMakeFiles/bin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/bin.dir/src/window.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/bin.dir/src/window.cpp.o -MF CMakeFiles/bin.dir/src/window.cpp.o.d -o CMakeFiles/bin.dir/src/window.cpp.o -c /home/acer/code/voxis-cpp/src/window.cpp
+
+CMakeFiles/bin.dir/src/window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bin.dir/src/window.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/acer/code/voxis-cpp/src/window.cpp > CMakeFiles/bin.dir/src/window.cpp.i
+
+CMakeFiles/bin.dir/src/window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bin.dir/src/window.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/acer/code/voxis-cpp/src/window.cpp -o CMakeFiles/bin.dir/src/window.cpp.s
 
 # Object files for target bin
 bin_OBJECTS = \
-"CMakeFiles/bin.dir/init.cpp.o"
+"CMakeFiles/bin.dir/src/main.cpp.o" \
+"CMakeFiles/bin.dir/src/appdef.cpp.o" \
+"CMakeFiles/bin.dir/src/window.cpp.o"
 
 # External object files for target bin
 bin_EXTERNAL_OBJECTS =
 
-bin: CMakeFiles/bin.dir/init.cpp.o
+bin: CMakeFiles/bin.dir/src/main.cpp.o
+bin: CMakeFiles/bin.dir/src/appdef.cpp.o
+bin: CMakeFiles/bin.dir/src/window.cpp.o
 bin: CMakeFiles/bin.dir/build.make
 bin: CMakeFiles/bin.dir/compiler_depend.ts
 bin: /home/acer/code/voxis-cpp/dawn/out/Release/src/dawn/glfw/libdawn_glfw.a
 bin: /home/acer/code/voxis-cpp/dawn/install/Release/lib/libwebgpu_dawn.a
 bin: /usr/lib/x86_64-linux-gnu/libglfw.so.3.4
 bin: CMakeFiles/bin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/acer/code/voxis-cpp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

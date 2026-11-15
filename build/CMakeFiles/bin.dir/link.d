@@ -2,7 +2,9 @@ bin: \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/Scrt1.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/../../../x86_64-linux-gnu/crti.o \
   /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o \
-  CMakeFiles/bin.dir/init.cpp.o \
+  CMakeFiles/bin.dir/src/main.cpp.o \
+  CMakeFiles/bin.dir/src/appdef.cpp.o \
+  CMakeFiles/bin.dir/src/window.cpp.o \
   /home/acer/code/voxis-cpp/dawn/out/Release/src/dawn/glfw/libdawn_glfw.a \
   /home/acer/code/voxis-cpp/dawn/install/Release/lib/libwebgpu_dawn.a \
   /usr/lib/x86_64-linux-gnu/libglfw.so.3.4 \
@@ -44,7 +46,11 @@ bin: \
 
 /usr/lib/gcc/x86_64-linux-gnu/15/crtbeginS.o:
 
-CMakeFiles/bin.dir/init.cpp.o:
+CMakeFiles/bin.dir/src/main.cpp.o:
+
+CMakeFiles/bin.dir/src/appdef.cpp.o:
+
+CMakeFiles/bin.dir/src/window.cpp.o:
 
 /home/acer/code/voxis-cpp/dawn/out/Release/src/dawn/glfw/libdawn_glfw.a:
 

@@ -129,29 +129,77 @@ bin/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/build
 .PHONY : bin/fast
 
-init.o: init.cpp.o
-.PHONY : init.o
+src/appdef.o: src/appdef.cpp.o
+.PHONY : src/appdef.o
 
 # target to build an object file
-init.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/init.cpp.o
-.PHONY : init.cpp.o
+src/appdef.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/appdef.cpp.o
+.PHONY : src/appdef.cpp.o
 
-init.i: init.cpp.i
-.PHONY : init.i
+src/appdef.i: src/appdef.cpp.i
+.PHONY : src/appdef.i
 
 # target to preprocess a source file
-init.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/init.cpp.i
-.PHONY : init.cpp.i
+src/appdef.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/appdef.cpp.i
+.PHONY : src/appdef.cpp.i
 
-init.s: init.cpp.s
-.PHONY : init.s
+src/appdef.s: src/appdef.cpp.s
+.PHONY : src/appdef.s
 
 # target to generate assembly for a file
-init.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/init.cpp.s
-.PHONY : init.cpp.s
+src/appdef.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/appdef.cpp.s
+.PHONY : src/appdef.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
+
+src/window.o: src/window.cpp.o
+.PHONY : src/window.o
+
+# target to build an object file
+src/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/window.cpp.o
+.PHONY : src/window.cpp.o
+
+src/window.i: src/window.cpp.i
+.PHONY : src/window.i
+
+# target to preprocess a source file
+src/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/window.cpp.i
+.PHONY : src/window.cpp.i
+
+src/window.s: src/window.cpp.s
+.PHONY : src/window.s
+
+# target to generate assembly for a file
+src/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/bin.dir/build.make CMakeFiles/bin.dir/src/window.cpp.s
+.PHONY : src/window.cpp.s
 
 # Help Target
 help:
@@ -162,9 +210,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bin"
-	@echo "... init.o"
-	@echo "... init.i"
-	@echo "... init.s"
+	@echo "... src/appdef.o"
+	@echo "... src/appdef.i"
+	@echo "... src/appdef.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/window.o"
+	@echo "... src/window.i"
+	@echo "... src/window.s"
 .PHONY : help
 
 

@@ -8,7 +8,7 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 find_package(Dawn REQUIRED)
 find_package(glfw3 REQUIRED)
 
-add_executable(bin init.cpp)
+add_executable(bin src/main.cpp src/appdef.cpp src/window.cpp)
 
 target_include_directories(bin PRIVATE
     ${CMAKE_SOURCE_DIR}/dawn/include

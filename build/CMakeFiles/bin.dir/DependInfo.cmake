@@ -8,7 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/acer/code/voxis-cpp/init.cpp" "CMakeFiles/bin.dir/init.cpp.o" "gcc" "CMakeFiles/bin.dir/init.cpp.o.d"
+  "/home/acer/code/voxis-cpp/src/appdef.cpp" "CMakeFiles/bin.dir/src/appdef.cpp.o" "gcc" "CMakeFiles/bin.dir/src/appdef.cpp.o.d"
+  "/home/acer/code/voxis-cpp/src/main.cpp" "CMakeFiles/bin.dir/src/main.cpp.o" "gcc" "CMakeFiles/bin.dir/src/main.cpp.o.d"
+  "/home/acer/code/voxis-cpp/src/window.cpp" "CMakeFiles/bin.dir/src/window.cpp.o" "gcc" "CMakeFiles/bin.dir/src/window.cpp.o.d"
   "" "bin" "gcc" "CMakeFiles/bin.dir/link.d"
   )
 
