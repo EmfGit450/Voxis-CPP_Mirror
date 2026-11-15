@@ -1,3 +1,0 @@
-/home/acer/code/voxis-cpp/build/CMakeFiles/bin.dir
-/home/acer/code/voxis-cpp/build/CMakeFiles/edit_cache.dir
-/home/acer/code/voxis-cpp/build/CMakeFiles/rebuild_cache.dir
