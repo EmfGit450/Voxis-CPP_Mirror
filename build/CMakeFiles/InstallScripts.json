@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/acer/code/voxis-cpp/build/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

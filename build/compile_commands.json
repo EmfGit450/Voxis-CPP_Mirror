@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/acer/code/voxis-cpp/build",
+  "command": "/usr/bin/c++  -I/home/acer/code/voxis-cpp/dawn/include -isystem /home/acer/code/voxis-cpp/dawn/install/Release/include -std=c++20 -Wall -Wextra -pedantic -o CMakeFiles/bin.dir/init.cpp.o -c /home/acer/code/voxis-cpp/init.cpp",
+  "file": "/home/acer/code/voxis-cpp/init.cpp",
+  "output": "CMakeFiles/bin.dir/init.cpp.o"
+}
+]
