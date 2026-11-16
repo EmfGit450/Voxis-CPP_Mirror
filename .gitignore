@@ -3,3 +3,4 @@ build/*
 dawn/
 exec
 push
+compile_commands.json

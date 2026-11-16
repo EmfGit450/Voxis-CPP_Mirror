@@ -19,4 +19,24 @@ namespace Types {
       const wgpu::Buffer& GetRawBuffer() const { return _buffer; }
       unsigned int GetSize() const { return _size; }
   };
+
+  class VertexBuffer {
+    private:
+      wgpu::Buffer _buffer;
+      unsigned int _size;
+      unsigned int _vertex_count;
+
+    public:
+      VertexBuffer(wgpu::Device device, wgpu::Queue queue, const void* data, unsigned int size);
+
+      VertexBuffer(const Buffer& buffer) = delete;
+      VertexBuffer& operator=(const Buffer&) = delete;
+
+      VertexBuffer(VertexBuffer&&) noexcept = default;
+      VertexBuffer& operator=(VertexBuffer&&) noexcept = default;
+
+      const wgpu::Buffer& GetRawBuffer() const { return _buffer; }
+      unsigned int GetSize() const { return _size; }
+      unsigned int GetVertexCount() const { return _vertex_count; }
+  };
 }

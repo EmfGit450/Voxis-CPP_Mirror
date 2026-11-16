@@ -1,5 +1,6 @@
 #pragma once
 #include "window.h"
+#include "buffer.h"
 #include <vector>
 #include <string_view>
 
