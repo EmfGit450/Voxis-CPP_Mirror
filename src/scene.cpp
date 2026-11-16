@@ -7,7 +7,7 @@ namespace App {
       
     public:
       Scene(Renderer renderer) {
-
+        
       }
   };
 }

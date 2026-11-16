@@ -11,9 +11,4 @@ namespace Types {
   struct Mesh {
     std::vector<Vertex> vertices;
   };
-
-  
-  class Buffer {
-    
-  }
 }
