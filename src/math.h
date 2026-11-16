@@ -1,6 +1,13 @@
 namespace Math {
-  struct Vertex {
-    float position[3];
-    float color[3];
+  struct Vector3 {
+    float x;
+    float y;
+    float z;
+  };
+
+  struct Color3 {
+    float r;
+    float g;
+    float b;
   };
 }
