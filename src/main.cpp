@@ -2,7 +2,7 @@
 #include "window.h"
 #include "appdef.h"
 #include "objects.h"
-#include "renderer.h"
+#include "buffer.h"
 #include <string_view>
 #include <vector>
 
@@ -45,20 +45,24 @@ int main() {
     }
 
     // --- 3. CREATE THE VERTEX BUFFER ---
-    std::vector<Types::Vertex> vertices = {
-      Types::Vertex{Math::Vector3{-0.5f, 0.5f, 0.0f}, Math::Color3{1.0f, 0.0f, 0.0f}},   // Top (Red)
-      Types::Vertex{Math::Vector3{-0.5f, -0.5f, 0.0f}, Math::Color3{0.0f, 1.0f, 0.0f}}, // Bottom Left (Green)
-      Types::Vertex{Math::Vector3{0.5f, -0.5f, 0.0f}, Math::Color3{0.0f, 0.0f, 1.0f}}, // Bottom Right (Blue)
+    std::vector<std::vector<float>> vertices = {
+      Types::Vertex{Math::Vector3{-0.5f, 0.5f, 0.0f}, Math::Color3{1.0f, 0.0f, 0.0f}}.raw(),   // Top (Red)
+      Types::Vertex{Math::Vector3{-0.5f, -0.5f, 0.0f}, Math::Color3{0.0f, 1.0f, 0.0f}}.raw(), // Bottom Left (Green)
+      Types::Vertex{Math::Vector3{0.5f, -0.5f, 0.0f}, Math::Color3{0.0f, 0.0f, 1.0f}}.raw(), // Bottom Right (Blue)
     };
 
-    wgpu::BufferDescriptor bufferDesc{};
-    bufferDesc.size = vertices.size() * sizeof(Types::Vertex);
-    bufferDesc.usage = wgpu::BufferUsage::Vertex | wgpu::BufferUsage::CopyDst;
-    bufferDesc.mappedAtCreation = false;
-    wgpu::Buffer vertexBuffer = ctx.device.CreateBuffer(&bufferDesc);
+    unsigned int buffSize = vertices.size() * sizeof(Types::Vertex);
+
+    Types::Buffer vertexBuffer(
+      ctx.device,
+      ctx.queue,
+      vertices.data(),
+      buffSize,
+      wgpu::BufferUsage::Vertex | wgpu::BufferUsage::CopyDst
+    );
 
     // Upload the data to the GPU
-    ctx.queue.WriteBuffer(vertexBuffer, 0, vertices.data(), bufferDesc.size);
+    ctx.queue.WriteBuffer(vertexBuffer.GetRawBuffer(), 0, vertices.data(), buffSize);
 
     App::Renderer engine(ctx, shaderSource);
 

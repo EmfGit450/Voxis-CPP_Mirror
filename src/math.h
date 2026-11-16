@@ -9,5 +9,6 @@ namespace Math {
     float r;
     float g;
     float b;
+    static constexpr float a = 1;
   };
 }
