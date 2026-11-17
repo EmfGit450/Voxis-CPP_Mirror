@@ -1,6 +1,9 @@
 build/*
 !build/bin
 dawn/
+.cache/
+
 exec
 push
+
 compile_commands.json
