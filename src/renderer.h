@@ -1,7 +1,5 @@
 #pragma once
 #include "window.h"
-#include "buffer.h"
-#include <vector>
 #include <string_view>
 
 namespace App {
@@ -10,8 +8,6 @@ namespace App {
       WindowContext& _ctx;
 
       wgpu::RenderPipeline _pipeline;
-
-      std::vector<wgpu::Buffer> vertexBuffers;
 
     public:
 

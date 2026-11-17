@@ -52,35 +52,37 @@ namespace App {
     App::log("Created render pipeline", App::LogType::INFO);
   }
 
-  void Renderer::DrawFrame() {
-    wgpu::SurfaceTexture surfaceTexture;
-    this->_ctx.surface.GetCurrentTexture(&surfaceTexture);
+  // Not Now
+  //
+  // void Renderer::DrawFrame() {
+  //   wgpu::SurfaceTexture surfaceTexture;
+  //   this->_ctx.surface.GetCurrentTexture(&surfaceTexture);
 
-    wgpu::CommandEncoder encoder = this->_ctx.device.CreateCommandEncoder();
+  //   wgpu::CommandEncoder encoder = this->_ctx.device.CreateCommandEncoder();
 
-    wgpu::RenderPassColorAttachment colorAttachment{};
-    colorAttachment.view = surfaceTexture.texture.CreateView();
-    colorAttachment.loadOp = wgpu::LoadOp::Clear;
-    colorAttachment.storeOp = wgpu::StoreOp::Store;
-    colorAttachment.clearValue = {0.05f, 0.05f, 0.1f, 1.0f};
+  //   wgpu::RenderPassColorAttachment colorAttachment{};
+  //   colorAttachment.view = surfaceTexture.texture.CreateView();
+  //   colorAttachment.loadOp = wgpu::LoadOp::Clear;
+  //   colorAttachment.storeOp = wgpu::StoreOp::Store;
+  //   colorAttachment.clearValue = {0.05f, 0.05f, 0.1f, 1.0f};
 
-    wgpu::RenderPassDescriptor renderPassDesc{};
-    renderPassDesc.colorAttachmentCount = 1;
-    renderPassDesc.colorAttachments = &colorAttachment;
+  //   wgpu::RenderPassDescriptor renderPassDesc{};
+  //   renderPassDesc.colorAttachmentCount = 1;
+  //   renderPassDesc.colorAttachments = &colorAttachment;
 
-    wgpu::RenderPassEncoder renderPass = encoder.BeginRenderPass(&renderPassDesc);
+  //   wgpu::RenderPassEncoder renderPass = encoder.BeginRenderPass(&renderPassDesc);
 
-    renderPass.SetPipeline(this->_pipeline);
+  //   renderPass.SetPipeline(this->_pipeline);
 
-    for (wgpu::Buffer& buffer : this->vertexBuffers) {
-      renderPass.SetVertexBuffer(0, buffer); // Set the buffer!
-      renderPass.Draw(buffer.GetSize() / sizeof(Types::Vertex), 1, 0, 0);  
-    }
+  //   for (wgpu::Buffer& buffer : this->vertexBuffers) {
+  //     renderPass.SetVertexBuffer(0, buffer); // Set the buffer!
+  //     renderPass.Draw(buffer.GetSize() / sizeof(Types::Vertex), 1, 0, 0);  
+  //   }
 
-    renderPass.End();
+  //   renderPass.End();
 
-    wgpu::CommandBuffer command = encoder.Finish();
-    this->_ctx.queue.Submit(1, &command);
-    this->_ctx.surface.Present();
-  }
+  //   wgpu::CommandBuffer command = encoder.Finish();
+  //   this->_ctx.queue.Submit(1, &command);
+  //   this->_ctx.surface.Present();
+  // }
 };

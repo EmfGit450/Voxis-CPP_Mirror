@@ -1,4 +1,3 @@
-#include "buffer.h"
 #include <stdexcept>
 #include <webgpu/webgpu_cpp.h>
 #include <unordered_map>
@@ -33,7 +32,17 @@ namespace Types {
           bufferDesc.mappedAtCreation = false;
           wgpu::Buffer buffer = this->_device.CreateBuffer(&bufferDesc);
 
-          queue.WriteBuffer(buffer, 0, data, bufferDesc.size);
+          this->_buffers[name] = buffer;
+
+          this->_queue.WriteBuffer(buffer, 0, data, bufferDesc.size);
+        }
+
+        wgpu::Buffer& GetBuffer(std::string name) {
+          if (!this->_buffers.contains(name)) {
+            throw std::invalid_argument("Buffer " + name + " does not exist");
+          }
+
+          return this->_buffers[name];
         }
    };
 }
