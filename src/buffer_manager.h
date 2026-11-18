@@ -1,5 +1,4 @@
 #pragma once
-#include <stdexcept>
 #include <webgpu/webgpu_cpp.h>
 #include <unordered_map>
 
@@ -14,7 +13,7 @@ namespace Types {
       public:
         BufferManager(wgpu::Device& device, wgpu::Queue queue): _device(device), _queue(queue) {}
 
-        void CreateBuffer(const std::string& name, const void* data, unsigned int size, wgpu::BufferUsage usage);
+        void CreateBuffer(const std::string& name, unsigned int size, wgpu::BufferUsage usage, const void* data);
 
         wgpu::Buffer& GetBuffer(const std::string& name);
 

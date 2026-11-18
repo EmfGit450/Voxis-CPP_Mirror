@@ -72,7 +72,7 @@ WindowContext InitWindow(int width, int height, const char* title) {
 
   ctx.surface.Configure(&ctx.config);
 
-  App::log("Successfully configured WebGPU", App::LogType::INFO);
+  App::log("Successfully configured Dawn", App::LogType::INFO);
   return ctx;
 }
 

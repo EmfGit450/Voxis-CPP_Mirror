@@ -1,16 +1,14 @@
 #include "buffer_manager.h"
+#include "appdef.h"
 #include <stdexcept>
+#include <string>
 #include <webgpu/webgpu_cpp.h>
 #include <unordered_map>
 
 namespace Types {
-  void BufferManager::CreateBuffer(const std::string& name, const void* data, unsigned int size, wgpu::BufferUsage usage) {
+  void BufferManager::CreateBuffer(const std::string& name, unsigned int size, wgpu::BufferUsage usage, const void* data = nullptr) {
     if (size == 0) {
       throw std::invalid_argument("Size is zero");
-    }
-
-    if (data == nullptr) {
-      throw std::invalid_argument("Data pointer is nullptr");
     }
 
     if (this->_buffers.contains(name)) {
@@ -23,9 +21,15 @@ namespace Types {
     bufferDesc.mappedAtCreation = false;
     wgpu::Buffer buffer = this->_device.CreateBuffer(&bufferDesc);
 
+    App::log("Created Buffer " + name, App::LogType::INFO);
+
     this->_buffers[name] = buffer;
 
-    this->_queue.WriteBuffer(buffer, 0, data, bufferDesc.size);
+    if (data != nullptr) {
+      this->_queue.WriteBuffer(buffer, 0, data, bufferDesc.size);
+
+      App::log("Wrote " + std::to_string(size) + " bytes to Buffer " + name, App::LogType::INFO);
+    }
   }
 
   wgpu::Buffer& BufferManager::GetBuffer(const std::string& name) {
@@ -56,6 +60,8 @@ namespace Types {
     }
 
     this->_queue.WriteBuffer(buffer, offset, data, size);
+
+    App::log("Wrote " + std::to_string(size) + " bytes to Buffer " + name, App::LogType::INFO);
   }
 
   void BufferManager::RemoveBuffer(const std::string& name) {
@@ -64,6 +70,9 @@ namespace Types {
     }
 
     this->_buffers[name].Destroy();
+    
+    App::log("Destroyed Buffer " + name, App::LogType::INFO);
+
     this->_buffers.erase(name);
   };
 }

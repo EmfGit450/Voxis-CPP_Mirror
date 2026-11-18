@@ -1,8 +1,9 @@
+#include "buffer_manager.h"
 #include "renderer.h"
+#include "webgpu/webgpu_cpp.h"
 #include "window.h"
 #include "appdef.h"
 #include "objects.h"
-#include "buffer.h"
 #include <string_view>
 #include <vector>
 
@@ -53,16 +54,10 @@ int main() {
 
     unsigned int buffSize = vertices.size() * sizeof(Types::Vertex);
 
-    Types::Buffer vertexBuffer(
-      ctx.device,
-      ctx.queue,
-      vertices.data(),
-      buffSize,
-      wgpu::BufferUsage::Vertex | wgpu::BufferUsage::CopyDst
-    );
+    Types::BufferManager bufferManager(ctx.device, ctx.queue);
+    bufferManager.CreateBuffer("vertexBuffer", buffSize, wgpu::BufferUsage::Vertex, vertices.data());
 
-    // Upload the data to the GPU
-    ctx.queue.WriteBuffer(vertexBuffer.GetRawBuffer(), 0, vertices.data(), buffSize);
+    // Data pointer is provided, so the data is written to the buffer in CreateBuffer()
 
     App::Renderer engine(ctx, shaderSource);
 
